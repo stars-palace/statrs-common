@@ -2,6 +2,7 @@ package xfile
 
 import (
 	"os"
+	"path"
 	"runtime"
 	"strings"
 )
@@ -100,4 +101,14 @@ func PathExists(path string) (bool, error) {
 		return false, nil
 	}
 	return false, err
+}
+
+func GetFileSuffix(f *os.File) string {
+	//获取文件名称
+	fileName := f.Name()
+	//获取文件名带后缀
+	filenameWithSuffix := path.Base(fileName)
+	//获取文件后缀
+	fileSuffix := path.Ext(filenameWithSuffix)
+	return fileSuffix
 }
