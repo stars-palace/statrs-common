@@ -2,4 +2,6 @@
 
 ### Installation
 #### Go developers
-、、、go get github.com/EngineerBetter/yml2env、、、
+```
+go get github.com/stars-palace/statrs-common
+```
